@@ -51,9 +51,18 @@
 
 // tour main
 
+
 .main-tour {
     height: 80vh;
     overflow: auto;
+
+    &__info {
+
+        @include flex-center;
+        font-size: 2rem;
+        color: #EDEFED;
+        margin: 10px 0;
+    }
 
     .static-container__tour {
         display: flex;
