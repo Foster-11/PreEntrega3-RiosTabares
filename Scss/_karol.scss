@@ -20,29 +20,49 @@
 // main
 .main-karol {
     min-height: 80vh;
+
 }
 
 .karol-date {
 
-    @include content-flex (0, row, space-between, center);
-    min-height: 100vh;
+    @include content-flex (row, space-between, center);
+    // min-height: 100vh;
     background-color: #e8cfe9bd;
 
     &__img-space {
-        height: 60vh;
-        width: 25vh;
+        height: 50vh;
+        width: 30vh;
     }
 
     .img2 {
         background-image: url("./pictures/karol-fondo1.jpg");
         background-size: cover;
+        margin: 0 20px;
     }
 
     .img1 {
         background-image: url("./pictures/karol_fondo2.jpg");
         background-size: cover;
+        margin: 0 20px;
     }
 
+    .karol-date__info {
+        @include content-flex(column, space-between, center);
+        list-style-type: none;
+    }
+
+    .karol-date__list {
+        padding: 10px;
+        @include content-flex(row, space-between, center);
+        list-style-type: none;
+        font-size: 1.3rem;
+
+    }
+
+    .karol-date__info-title {
+        color: #29696B;
+        text-shadow: -0.2rem 0 bisque
+    }
 
     .first {
         color: #5F459D;
@@ -57,31 +77,10 @@
         color: #29696B;
     }
 
-    .karol-date__info-title {
-        color: #29696B;
-        text-shadow: -0.2rem 0 bisque
-    }
 
-    .karol-date__info {
-        @include content-flex(0, column, space-between, center);
-        list-style-type: none;
-    }
 
-    .karol-date__list {
-        padding: 10px;
-        @include content-flex(0, row, space-between, center);
-        list-style-type: none;
 
-    }
 }
-
-
-.heigth {
-    height: 50vh;
-    @include flex-center;
-}
-
-
 
 .img-grilla {
 
@@ -101,22 +100,29 @@
 
             align-self: center;
             justify-self: center;
-            margin: 20px 0;
-            width: 50vh;
-            height: 40vh;
+            width: 40vh;
+            height: 30vh;
+            margin: 20px 20px;
 
         }
     }
 }
 
 
-.paragraph-container {
-    background-color: rgba(240, 248, 255, 0.219);
-    padding: 15px;
-    width: 70vh;
-    text-shadow: -2px 0 #1f6447;
-    color: rgb(206, 220, 231);
-    font-size: 1.5rem;
+.center-paragraph {
+    @include flex-center;
+
+    .paragraph-container {
+
+        background-color: rgba(240, 248, 255, 0.219);
+        margin: 20px 0;
+        padding: 15px;
+        width: 70vh;
+        text-shadow: -2px 0 #1f6447;
+        color: rgb(206, 220, 231);
+        font-size: 2rem;
+    }
+
 }
 
 // footer
@@ -144,13 +150,14 @@
 @media (max-width: 1000px) {
 
     .main-karol {
-        min-height: 100%;
+        min-height: 100vh;
     }
 
     .karol-date {
-        @include content-flex (0, row, space-between, center);
-        height: 60vh;
+        @include content-flex (row, space-between, center);
+        // height: 60vh;
         background-color: #e8cfe9bd;
+        margin: 20px 0;
 
         &__img-space {
             visibility: hidden;
@@ -176,11 +183,31 @@
                 align-self: center;
                 justify-self: center;
                 margin: 20px 0;
-                width: 30vh;
-                height: 20vh;
+                width: 40vh;
+                height: 30vh;
 
             }
         }
     }
+
+}
+
+@media (max-width: 530px) {
+
+    @for $numero from 1 through 6 {
+        .grid-#{$numero} {
+            grid-area: grid-#{$numero};
+
+            align-self: center;
+            justify-self: center;
+            margin: 20px 10px;
+            width: 30vh;
+            height: 20vh;
+
+        }
+    }
+
+
+
 
 }

@@ -66,44 +66,46 @@ img {
   background-size: auto;
   background-attachment: fixed;
   background-image: url("./pictures/album-Mañana-Será-Bonito.jpg");
+  overflow: auto;
 }
 
-.index-header-img {
+.index-header {
   background-color: rgba(179, 235, 237, 0.9725490196);
-  padding: 16px;
-  min-height: 0;
+  padding: 10px;
+  min-height: 10vh;
+}
+.index-header__img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
 }
-.index-header-img .index-header__container {
+.index-header__img .index-header__container {
   width: 192px;
 }
-.index-header-img .index-header__img {
+.index-header__img .index-header__img {
   width: 100%;
   height: 100%;
 }
-.index-header-img .index-header__container--edit {
+.index-header__img .index-header__container--edit {
   width: 80px;
 }
-.index-header-img .index-header__container--hidden {
+.index-header__img .index-header__container--hidden {
   width: 80px;
   visibility: hidden;
 }
 
-.main-index .txt--img {
-  padding: 80px 0;
+.main-index {
+  min-height: 80vh;
 }
-.main-index .txt {
-  min-height: 40vh;
+.main-index .txt--first_section {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-}
-.main-index .txt--first_section {
   background-color: rgba(212, 146, 160, 0.9254901961);
+  min-height: 40vh;
+  margin: 130px 0;
 }
 .main-index .txt--first_section .txt__title1 {
   text-shadow: -0.1em 0em #B3EBED;
@@ -114,7 +116,13 @@ img {
   font-size: 3.5rem;
 }
 .main-index .txt--second_section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 40vh;
   background-color: rgba(218, 246, 218, 0.737254902);
+  margin: 150px 0;
   padding: 50px;
 }
 .main-index .txt--second_section .txt__paragraph {
@@ -157,7 +165,6 @@ img {
   color: #EDEFED;
   font-size: 1.2rem;
   transition: 0.4s;
-  padding: 0 1rem;
 }
 .footer-index__element--link:active {
   color: #EDEFED;
@@ -286,11 +293,11 @@ img {
   align-items: center;
 }
 .footer__autor .footer__element {
+  margin: 0 10px;
   text-decoration: underline;
   color: black;
   font-size: 1.2rem;
   transition: 0.4s;
-  padding: 0 1rem;
 }
 .footer__autor .footer__element--link:active {
   color: black;
@@ -384,25 +391,45 @@ img {
 }
 
 .karol-date {
-  min-height: 0;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  min-height: 100vh;
   background-color: rgba(232, 207, 233, 0.7411764706);
 }
 .karol-date__img-space {
-  height: 60vh;
-  width: 25vh;
+  height: 50vh;
+  width: 30vh;
 }
 .karol-date .img2 {
   background-image: url("./pictures/karol-fondo1.jpg");
   background-size: cover;
+  margin: 0 20px;
 }
 .karol-date .img1 {
   background-image: url("./pictures/karol_fondo2.jpg");
   background-size: cover;
+  margin: 0 20px;
+}
+.karol-date .karol-date__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+}
+.karol-date .karol-date__list {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  list-style-type: none;
+  font-size: 1.3rem;
+}
+.karol-date .karol-date__info-title {
+  color: #29696B;
+  text-shadow: -0.2rem 0 bisque;
 }
 .karol-date .first {
   color: #5F459D;
@@ -413,34 +440,6 @@ img {
 .karol-date .third {
   padding: 0 10px 0 0;
   color: #29696B;
-}
-.karol-date .karol-date__info-title {
-  color: #29696B;
-  text-shadow: -0.2rem 0 bisque;
-}
-.karol-date .karol-date__info {
-  min-height: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-}
-.karol-date .karol-date__list {
-  padding: 10px;
-  min-height: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  list-style-type: none;
-}
-
-.heigth {
-  height: 50vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .img-grilla {
@@ -454,58 +453,64 @@ img {
   grid-area: grid-1;
   align-self: center;
   justify-self: center;
-  margin: 20px 0;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 30vh;
+  margin: 20px 20px;
 }
 .img-grilla .grid-2 {
   grid-area: grid-2;
   align-self: center;
   justify-self: center;
-  margin: 20px 0;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 30vh;
+  margin: 20px 20px;
 }
 .img-grilla .grid-3 {
   grid-area: grid-3;
   align-self: center;
   justify-self: center;
-  margin: 20px 0;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 30vh;
+  margin: 20px 20px;
 }
 .img-grilla .grid-4 {
   grid-area: grid-4;
   align-self: center;
   justify-self: center;
-  margin: 20px 0;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 30vh;
+  margin: 20px 20px;
 }
 .img-grilla .grid-5 {
   grid-area: grid-5;
   align-self: center;
   justify-self: center;
-  margin: 20px 0;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 30vh;
+  margin: 20px 20px;
 }
 .img-grilla .grid-6 {
   grid-area: grid-6;
   align-self: center;
   justify-self: center;
-  margin: 20px 0;
-  width: 50vh;
-  height: 40vh;
+  width: 40vh;
+  height: 30vh;
+  margin: 20px 20px;
 }
 
-.paragraph-container {
+.center-paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-paragraph .paragraph-container {
   background-color: rgba(240, 248, 255, 0.219);
+  margin: 20px 0;
   padding: 15px;
   width: 70vh;
   text-shadow: -2px 0 #1f6447;
   color: rgb(206, 220, 231);
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 .footer-karol {
@@ -523,7 +528,6 @@ img {
   color: #EDEFED;
   font-size: 1.2rem;
   transition: 0.4s;
-  padding: 0 1rem;
 }
 .footer-karol__element--link:active {
   color: #EDEFED;
@@ -535,16 +539,15 @@ img {
 
 @media (max-width: 1000px) {
   .main-karol {
-    min-height: 100%;
+    min-height: 100vh;
   }
   .karol-date {
-    min-height: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 60vh;
     background-color: rgba(232, 207, 233, 0.7411764706);
+    margin: 20px 0;
   }
   .karol-date__img-space {
     visibility: hidden;
@@ -561,46 +564,96 @@ img {
     align-self: center;
     justify-self: center;
     margin: 20px 0;
-    width: 30vh;
-    height: 20vh;
+    width: 40vh;
+    height: 30vh;
   }
   .img-grilla .grid-2 {
     grid-area: grid-2;
     align-self: center;
     justify-self: center;
     margin: 20px 0;
-    width: 30vh;
-    height: 20vh;
+    width: 40vh;
+    height: 30vh;
   }
   .img-grilla .grid-3 {
     grid-area: grid-3;
     align-self: center;
     justify-self: center;
     margin: 20px 0;
-    width: 30vh;
-    height: 20vh;
+    width: 40vh;
+    height: 30vh;
   }
   .img-grilla .grid-4 {
     grid-area: grid-4;
     align-self: center;
     justify-self: center;
     margin: 20px 0;
-    width: 30vh;
-    height: 20vh;
+    width: 40vh;
+    height: 30vh;
   }
   .img-grilla .grid-5 {
     grid-area: grid-5;
     align-self: center;
     justify-self: center;
     margin: 20px 0;
-    width: 30vh;
-    height: 20vh;
+    width: 40vh;
+    height: 30vh;
   }
   .img-grilla .grid-6 {
     grid-area: grid-6;
     align-self: center;
     justify-self: center;
     margin: 20px 0;
+    width: 40vh;
+    height: 30vh;
+  }
+}
+@media (max-width: 530px) {
+  .grid-1 {
+    grid-area: grid-1;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px;
+    width: 30vh;
+    height: 20vh;
+  }
+  .grid-2 {
+    grid-area: grid-2;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px;
+    width: 30vh;
+    height: 20vh;
+  }
+  .grid-3 {
+    grid-area: grid-3;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px;
+    width: 30vh;
+    height: 20vh;
+  }
+  .grid-4 {
+    grid-area: grid-4;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px;
+    width: 30vh;
+    height: 20vh;
+  }
+  .grid-5 {
+    grid-area: grid-5;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px;
+    width: 30vh;
+    height: 20vh;
+  }
+  .grid-6 {
+    grid-area: grid-6;
+    align-self: center;
+    justify-self: center;
+    margin: 20px 10px;
     width: 30vh;
     height: 20vh;
   }
@@ -714,7 +767,6 @@ img {
   color: #EDEFED;
   font-size: 1.2rem;
   transition: 0.4s;
-  padding: 0 1rem;
 }
 .footer-tour__element--link:active {
   color: #EDEFED;
@@ -781,13 +833,14 @@ img {
 
 .album-main {
   overflow: auto;
-  min-height: 70vh;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  min-height: 70vh;
 }
 .album-main__item {
+  margin: 20px 0;
   width: 50vh;
   padding: 20px 0;
   background-color: rgba(255, 255, 255, 0.534);
@@ -810,7 +863,6 @@ img {
   color: #EDEFED;
   font-size: 1.2rem;
   transition: 0.4s;
-  padding: 0 1rem;
 }
 .footer-album__element--link:active {
   color: #EDEFED;

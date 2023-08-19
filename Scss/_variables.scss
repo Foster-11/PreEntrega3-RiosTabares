@@ -15,7 +15,7 @@
     color: $Color;
     font-size: 1.2rem;
     transition: 0.4s;
-    padding: 0 1rem;
+
 }
 
 @mixin flex-center {
@@ -24,8 +24,8 @@
     align-items: center;
 }
 
-@mixin content-flex ($height, $direction, $justify, $aling) {
-    min-height: $height;
+@mixin content-flex ($direction, $justify, $aling) {
+
 
     display: flex;
     flex-direction: $direction;

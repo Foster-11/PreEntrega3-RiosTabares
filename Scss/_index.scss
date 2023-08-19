@@ -8,15 +8,19 @@
     background-size: auto;
     background-attachment: fixed;
     background-image: url("./pictures/album-Mañana-Será-Bonito.jpg");
+    overflow: auto;
 }
 
 // index header 
 .index-header {
+    background-color: #b3ebedf8;
+    padding: 10px;
+    min-height: 10vh;
 
-    &-img {
-        background-color: #b3ebedf8;
-        padding: 16px;
-        @include content-flex (0, row, space-between, center);
+    &__img {
+        @include content-flex (
+            /*0,*/
+            row, space-between, center);
 
         .index-header__container {
             width: 192px;
@@ -45,17 +49,14 @@
 // index main
 .main-index {
 
-
-    .txt--img {
-        padding: 80px 0;
-    }
-
-    .txt {
-        @include content-flex (40vh, column, space-around, center);
-    }
+    min-height: 80vh;
 
     .txt--first_section {
+        @include content-flex (column, space-around, center);
         background-color: #d492a0ec;
+        min-height: 40vh;
+
+        margin: 130px 0;
 
         .txt__title1 {
             text-shadow: -0.1em 0em #B3EBED;
@@ -70,8 +71,11 @@
     }
 
     .txt--second_section {
+        @include content-flex (column, space-around, center);
 
+        min-height: 40vh;
         background-color: #daf6dabc;
+        margin: 150px 0;
         padding: 50px;
 
         .txt__paragraph {
@@ -112,8 +116,6 @@
 // index footer
 
 .footer-index {
-
-
     @include footer (#7d5f5f9f);
 
     &__element {

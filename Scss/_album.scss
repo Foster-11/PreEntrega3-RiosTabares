@@ -23,9 +23,11 @@
 
 .album-main {
     overflow: auto;
-    @include content-flex (70vh, column, space-around, center);
+    @include content-flex (column, space-around, center);
+    min-height: 70vh;
 
     &__item {
+        margin: 20px 0;
         width: 50vh;
         padding: 20px 0;
         background-color: rgba(255, 255, 255, 0.534);

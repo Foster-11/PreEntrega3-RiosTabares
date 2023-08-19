@@ -83,6 +83,7 @@
     @include footer(#DDBAD4);
 
     .footer__element {
+        margin: 0 10px;
         @include footer__element (black);
 
         &--link:active {
